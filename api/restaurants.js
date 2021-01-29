@@ -5,7 +5,7 @@ const {
   createRestaurant,
   updateRestaurant,
   deleteRestaurant,
-  getRestaurantOrders
+  getRestaurantTags
 } = require('../controllers/restaurants');
 
 const api = express.Router();
@@ -20,9 +20,9 @@ api
   .put(updateRestaurant)
   .delete(deleteRestaurant)
 
-// locahost:5000/restaurants/:id/orders
+
 api
-  .route('/:id/orders')
-  .get(getRestaurantOrders)
+  .route('/:id/tags')
+  .get(getRestaurantTags)
 
 module.exports = api;
