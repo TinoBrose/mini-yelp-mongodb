@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const OrderSchema = new Schema({
-  userId: {
+const TagSchema = new Schema({
+  restaurantId: {
     type: mongoose.Schema.ObjectId,
-    ref: 'User',
-    required: [true, 'Please add a userId']
+    ref: 'Restaurant',
+    required: [true, 'Please add a restaurantId']
   },
   price: {
     type: Number,
@@ -13,4 +13,4 @@ const OrderSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('Order', OrderSchema);
+module.exports = mongoose.model('Tag', TagSchema);
